@@ -9,11 +9,11 @@ fun part1() = numbers.sum().toString()
 fun part2(): Int {
 
     val frequencies: MutableSet<Int> = mutableSetOf(0)
-    var frecuency = 0
+    var frequency = 0
     while (true) {
         numbers.forEach {
-            frecuency += it
-            if (!frequencies.add(frecuency)) return frecuency
+            frequency += it
+            if (!frequencies.add(frequency)) return frequency
 
         }
     }
