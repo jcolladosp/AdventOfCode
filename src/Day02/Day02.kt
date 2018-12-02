@@ -8,7 +8,7 @@ var threTimes = 0
 
 fun part1(): Int{
     ids.forEach { word ->
-        var repeatedCharacters = word.split("").groupingBy { it }.eachCount().filterValues { it > 1 }.filterKeys { it != "" }
+        var repeatedCharacters = word.groupingBy { it }.eachCount()
         if (repeatedCharacters.filterValues { it == 2 }.isNotEmpty()) twoTimes++
         if (repeatedCharacters.filterValues { it == 3 }.isNotEmpty()) threTimes++
 
